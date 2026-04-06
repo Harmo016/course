@@ -1,0 +1,10 @@
+WITH raw_review AS (
+    SELECT * FROM  {{  source('airbnb','reviews') }}
+)
+SELECT
+    LISTING_ID,
+    DATE AS REVIEW_DATE,
+    REVIEWER_NAME,
+    COMMENTS AS REVIEWER_COMMENTS,
+    SENTIMENT AS REVIEWER_SENTIMENT
+FROM raw_review
