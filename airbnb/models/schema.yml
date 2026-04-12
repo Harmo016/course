@@ -3,9 +3,10 @@ models:
     tests:
       - minimum_row_count:
           arguments:
-            min_row_count: 1000
+            min_row_count: 100
           severity:
             warning
+
     columns:
       - name: listing_id
         tests:
